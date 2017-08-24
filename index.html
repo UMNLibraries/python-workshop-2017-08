@@ -85,16 +85,20 @@ print('Hello, {}!'.format(to))
 def hello(to):
   return 'Hello, {}!'.format(to)
 					</code></pre>
+					<pre class="fragment"><code data-noescape class="python">
+msg = hello('World')
+print(hello(msg))
+					</code></pre>
 				</section>
 
 				<section>
           <h1>Modules &amp; Namespaces</h1>  
-          <p class="fragment">In file <pre>hello.py</pre>:</p>
+          <p class="fragment">In file <strong>hello.py</strong>:</p>
 					<pre class="fragment"><code data-noescape class="python">
 def msg(to):
   return 'Hello, {}!'.format(to)
 					</code></pre>
-          <p class="fragment">In file <pre>goodbye.py</pre>:</p>
+          <p class="fragment">In file <strong>goodbye.py</strong>:</p>
 					<pre class="fragment"><code data-noescape class="python">
 def msg(to):
   return 'Goodbye, {}!'.format(to)
