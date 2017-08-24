@@ -88,6 +88,7 @@ print('Hello, {}!'.format(to))
 					<pre class="fragment"><code data-noescape class="python">
 type('World')
 type(to)
+type(print)
 					</code></pre>
 				</section>
 
@@ -110,6 +111,23 @@ def hello(to):
 					<pre class="fragment"><code data-noescape class="python">
 msg = hello('World')
 print(hello(msg))
+					</code></pre>
+				</section>
+
+				<section>
+          <h2>Functional Programming</h2>  
+					<p class="fragment"><a href="https://en.wikipedia.org/wiki/Functional_programming">Functional programming</a> encourages using <a href="">pure functions</a>, which always return the same output for the same input, without side effects.</p> 
+					<p class="fragment">Are <strong>print</strong> and <strong>hello</strong> pure functions?</p>
+					<pre class="fragment"><code data-noescape class="python">
+def hello(to):
+  return 'Hello, {}!'.format(to)
+					</code></pre>
+          <p class="fragment">Indentation level, i.e. <em>whitespace</em>, is significant!</p>
+					<pre class="fragment"><code data-noescape class="python">
+msg = hello('World')
+type(msg)
+retval = print('Hello, World!')
+type(retval)
 					</code></pre>
 				</section>
 
