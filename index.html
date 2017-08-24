@@ -82,6 +82,25 @@ print('Hello, {}!'.format(to))
 				</section>
 
 				<section>
+          <h2>Types &amp; Objects</h2>
+					<p class="fragment">Everything in Python is some <em>type</em> of <em>object</em>. Objects contain <em>attributes</em>, usually data and related functions, called <em>methods</em>.</p>
+					<p class="fragment">Python is <em>dynamically typed</em> because it determines these types at runtime.</p>
+					<pre class="fragment"><code data-noescape class="python">
+type('World')
+type(to)
+					</code></pre>
+				</section>
+
+				<section>
+          <h2>Strong Typing</h2>
+					<p class="fragment">Python is also <em>strongly typed</em>. For example, some operations require operands of specific types.</p>
+					<p class="fragment">What happens when we do this?</p>
+					<pre class="fragment"><code data-noescape class="python">
+'World' + 3
+					</code></pre>
+				</section>
+
+				<section>
           <h1>Functions</h1>  
 					<pre class="fragment"><code data-noescape class="python">
 def hello(to):
@@ -90,16 +109,6 @@ def hello(to):
 					<pre class="fragment"><code data-noescape class="python">
 msg = hello('World')
 print(hello(msg))
-					</code></pre>
-				</section>
-
-				<section>
-          <h2>Types & Objects</h2>
-					<p class="fragment">Everything in Python is some <em>type</em> of <em>object</em>. Objects contain both data, often called <em>attributes</em>, and related functions, called <em>methods</em>.</p>
-					<p class="fragment">Python is <em>dynamically-typed</em> because it determines these types at runtime.</p>
-					<pre class="fragment"><code data-noescape class="python">
-type('World')
-type(hello)
 					</code></pre>
 				</section>
 
