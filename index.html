@@ -175,6 +175,8 @@ rand
 					<p>The <a href="https://pypi.python.org/pypi">Python Package Index (PyPI)</a> has even more packages. Install with <a href="https://pypi.python.org/pypi/pip">pip</a>:</p>
 					<pre class="fragment"><code data-noescape class="bash">
 !pip install --user simplejson
+					</code></pre>
+					<pre class="fragment"><code data-noescape class="python">
 import simplejson as json
 json.dumps({"c": 2, "b": 1, "a": 0}, sort_keys=True)
 					</code></pre>
@@ -189,6 +191,42 @@ messages/
     messages/
         __init__.py
     setup.py
+					</code></pre>
+				</section>
+
+				<section>
+          <h2>Packages - Custom - __init__.py</h2>  
+					<pre class="fragment"><code data-noescape class="python">
+def hello(to):
+  return 'Hello, {}!'.format(to)
+
+def goodbye(to):
+  return 'Goodbye, {}!'.format(to)
+					</code></pre>
+				</section>
+
+				<section>
+          <h2>Packages - Custom - setup.py</h2>  
+					<pre class="fragment"><code data-noescape class="python">
+from setuptools import setup
+
+setup(name='messages',
+      version='0.0',
+      description='Generates custom messages.',
+      url='http://github.com/UMNLibraries',
+      author='David Naughton',
+      author_email='naughton@umn.edu',
+      license='MIT',
+      packages=['messages'],
+      zip_safe=False)
+					</code></pre>
+				</section>
+
+				<section>
+          <h2>Packages - Custom - Install</h2>  
+          <p>Can't get this to work in Jupyter, so we'll use a terminal:</p>
+					<pre class="fragment"><code data-noescape class="bash">
+pip install -e /path/to/messages
 					</code></pre>
 				</section>
 
